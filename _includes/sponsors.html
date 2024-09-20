@@ -1,0 +1,20 @@
+               <!-- Sponsors Section -->
+               <section id="sponsors" class="mb-12">
+                <h3 class="text-xl font-semibold mb-4 text-primary">Our Sponsors {% include icon.html name="arrow-right" class="inline w-4 h-4 ml-1" %}</h3>
+                <p class="text-secondary mb-4">Thank you to our amazing sponsors for their support</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    {% for sponsor in site.data.sponsors %}
+                    <div class="bg-white border border-gray-200 rounded-lg shadow-sm p-4 text-center hover:shadow-md transition-shadow">
+                        <a href="{{ sponsor.url }}" class="block mb-2">
+                            <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" class="w-full h-20 object-contain mx-auto">
+                        </a>
+                        <h4 class="font-semibold text-primary">{{ sponsor.name }}</h4>
+                        <!-- <p class="text-sm text-secondary mt-2">
+                            {% if sponsor.contribution %}
+                            {{ sponsor.contribution }}
+                            {% endif %}
+                        </p> -->
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>

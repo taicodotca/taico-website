@@ -1,0 +1,16 @@
+<!-- Tally Script -->
+<script>
+    var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}
+</script>
+
+<!-- Prism.js for syntax highlighting -->
+<link href="/assets/css/prism-okaidia.min.css" rel="stylesheet" />
+<script src="/assets/js/prism.min.js"></script>
+<script src="/assets/js/prism-autoloader.min.js"></script>
+
+<script>
+    // Re-run Prism highlighting after the page loads
+    document.addEventListener('DOMContentLoaded', (event) => {
+        Prism.highlightAll();
+    });
+</script>

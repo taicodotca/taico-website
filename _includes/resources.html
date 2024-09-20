@@ -1,0 +1,13 @@
+               <!-- Resources Section -->
+               <section id="resources" class="mb-12">
+                <h3 class="text-xl font-semibold mb-4 text-primary">Resources and Library {% include icon.html name="arrow-right" class="inline w-4 h-4 ml-1" %}</h3>
+                <p class="text-secondary mb-4">Useful links and recommended content</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                    {% for resource in site.data.resources limit:10 %}
+                    <a href="{{ resource.url }}" class="block bg-white border border-gray-200 rounded-lg shadow-sm p-2">
+                        <img src="{{ resource.image | default: '/assets/images/default-resource-image.jpg' }}" alt="{{ resource.title }}" class="w-full aspect-square object-cover rounded-lg mb-2">
+                        <p class="text-sm font-semibold text-primary">{{ resource.title }}</p>
+                    </a>
+                    {% endfor %}
+                </div>
+            </section>

@@ -1,0 +1,28 @@
+{
+  "name": "claude-jekyll-template",
+  "version": "1.0.0",
+  "description": "A Jekyll site with Tailwind CSS",
+  "scripts": {
+    "build": "JEKYLL_ENV=production bundle exec jekyll build",
+    "serve": "bundle exec jekyll serve",
+    "watch:css": "postcss ./assets/css/main.css -o ./assets/css/styles.css --watch",
+    "build:css": "postcss ./assets/css/main.css -o ./assets/css/styles.css",
+    "start": "npm-run-all --parallel serve watch:css"
+  },
+  "keywords": [
+    "jekyll",
+    "tailwindcss"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.13",
+    "autoprefixer": "^10.4.19",
+    "cssnano": "^7.0.3",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.39",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^16.1.0",
+    "tailwindcss": "^3.4.4"
+  }
+}

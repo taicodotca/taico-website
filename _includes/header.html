@@ -1,0 +1,28 @@
+<header class="mb-12">
+    <div class="w-full bg-white bg-texture bg-opacity-50 shadow-md rounded-lg">        
+        <div class="container mx-auto px-4 py-4">
+            <nav class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="/"><img src="/img/logo/taico-logo.png" alt="TAICO Logo" class="h-20 mr-4"></a>
+                </div>
+                {% include nav-dropdown.html %}
+            </nav>
+        </div>
+    </div>
+
+    {% if page.show_hero %}
+    <div class="container mx-auto px-4 mt-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <div class="lg:w-2/3">
+                <h2 class="text-4xl font-bold mb-6">The Toronto Artificial Intelligence and Cybersecurity Organization</h2>
+                <p class="mb-6 text-lg">Canada is a country of builders. Toronto is a hotbed of high-tech innovation. At TAICO events we'll explore the worlds of AI and cybersecurity, bringing people and technology together in one place.</p>
+                <p class="mb-6 text-lg">Join us by attending a meetup, workshop, or other event!</p>
+            </div>
+            
+            <div class="lg:w-1/3">
+                {% include social-links.html %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</header>

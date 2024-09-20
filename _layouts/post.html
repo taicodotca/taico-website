@@ -1,0 +1,101 @@
+---
+layout: default
+hero: false
+---
+
+<article class="max-w-4xl mx-auto px-4 py-8">
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        {% if page.image %}
+        <img src="{{ page.image }}" alt="{{ page.title }}" class="w-full object-cover">
+        {% endif %}
+        
+        <div class="p-6">
+            <header class="mb-8">
+                <h1 class="text-4xl font-bold mb-6">{{ page.title }}</h1>
+                
+                <div class="flex flex-wrap items-center justify-between bg-gray-100 p-4 rounded-lg">
+                    {% if page.author %}
+                    <div class="flex items-center mb-4 sm:mb-0">
+                        {% if page.author_image %}
+                        <img src="{{ page.author_image }}" alt="{{ page.author }}" class="w-12 h-12 rounded-full mr-3 object-cover">
+                        {% endif %}
+                        <div>
+                            <p class="font-semibold">by {{ page.author }}</p>
+                            {% if page.author_linkedin %}
+                            <a href="{{ page.author_linkedin }}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline flex items-center text-sm">
+                                {% include icon.html name="linkedin" class="inline-block w-4 h-4 mr-1" %}
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    <div class="flex flex-wrap items-center text-sm text-gray-600">
+                        <span class="flex items-center mr-4 mb-2 sm:mb-0">
+                            {% include icon.html name="calendar" class="inline-block w-4 h-4 mr-1" %}
+                            {{ page.date | date: "%B %d, %Y" }}
+                        </span>
+                        {% if page.categories %}
+                        <!-- <span class="flex items-center flex-wrap">
+                            {% include icon.html name="tag" class="inline-block w-4 h-4 mr-1" %}
+                            {% for category in page.categories %}
+                                <a href="/categories/{{ category | slugify }}" class="text-blue-600 hover:underline mr-2">{{ category }}</a>
+                            {% endfor %}
+                        </span> -->
+                        {% endif %}
+                    </div>
+                </div>
+            </header>
+
+            <div class="prose lg:prose-xl mx-auto space-y-4">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+</article>
+
+{% if page.categories contains "event" %}
+<!-- Event Gallery Section -->
+<section id="gallery" class="max-w-4xl mx-auto px-4 py-8">
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="p-6">
+            <h2 class="text-2xl font-bold mb-4 text-primary">Event Image Gallery {% include icon.html name="arrow-right" class="inline w-4 h-4 ml-1" %}</h2>
+            <p class="mb-4 text-secondary">Explore images from this event</p>
+            <div class="mb-4">
+                {% event_gallery 1 %}
+            </div>
+            <a href="/all-events.html" class="text-accent hover:underline flex items-center">
+                View all events {% include icon.html name="arrow-right" class="w-4 h-4 ml-1" %}
+            </a>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{% if site.related_posts.size > 0 %}
+<section class="max-w-4xl mx-auto px-4 py-8">
+    <h2 class="text-2xl font-bold mb-4">Related Posts</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {% for post in site.related_posts limit:2 %}
+        <a href="{{ post.url }}" class="group block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            <div class="relative w-full pt-[56.25%]">
+                {% if post.image %}
+                <img src="{{ post.image }}" alt="{{ post.title }}" class="absolute inset-0 w-full h-full object-cover">
+                {% else %}
+                <div class="absolute inset-0 bg-gray-200 flex items-center justify-center">
+                    <span class="text-gray-500">No image available</span>
+                </div>
+                {% endif %}
+            </div>
+            <div class="p-4">
+                <h3 class="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors duration-300">{{ post.title }}</h3>
+                <p class="text-gray-600 mb-4">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                <span class="text-blue-600 inline-flex items-center">
+                    Read more {% include icon.html name="arrow-right" class="inline-block w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" %}
+                </span>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}

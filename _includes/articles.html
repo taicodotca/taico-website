@@ -1,0 +1,32 @@
+<!-- Articles Section -->
+<section id="articles" class="mb-12">
+  <h2 class="text-2xl font-bold mb-4 text-primary">Articles and Blog Posts {% include icon.html name="arrow-right" class="inline w-4 h-4 ml-1" %}</h2>
+  <p class="mb-4 text-secondary">Discover our latest articles and insights. <a href="/all-articles.html" class="text-accent hover:underline flex items-center">View all {% include icon.html name="arrow-right" class="w-4 h-4 ml-1" %}</a></p>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {% for post in site.posts %}
+      {% unless post.categories contains "event" %}
+        <a href="{{ post.url }}" class="group block bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
+          <div class="relative w-full pt-[56.25%]">
+              <img
+              src="{{ post.image | size: 400 }}"
+              srcset="{{ post.image | srcset }}"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              width="{{ post.image | width }}"
+              height="{{ post.image | height }}"
+              alt="{{ page.title }} - Gallery Image"
+              class="absolute inset-0 w-full h-full object-cover"
+              >          
+        </div>
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2 text-primary group-hover:text-accent transition-colors duration-300">{{ post.title }}</h3>
+            <p class="text-sm text-secondary mb-2">{{ post.date | date: "%B %d, %Y" }} • {{ post.categories | join: ", " }}</p>
+            <p class="text-secondary mb-4">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+            <span class="text-accent inline-flex items-center">
+              Read more {% include icon.html name="arrow-right" class="inline w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" %}
+            </span>
+          </div>
+        </a>
+      {% endunless %}
+    {% endfor %}
+  </div>
+</section>

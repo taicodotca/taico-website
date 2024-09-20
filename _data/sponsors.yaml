@@ -1,0 +1,18 @@
+- name: Sysdig
+  logo: /img/sponsors/sysdig.jpg
+  url: https://www.sysdig.com
+  contribution: Food & Drinks
+
+- name: Cloudthrill
+  logo: /img/sponsors/cloudthrill.jpg
+  url: https://www.cloudthrill.ca
+
+- name: Hays
+  logo: /img/sponsors/hays.png
+  url: https://www.hays.com
+  contribution: Host
+
+- name: Adaptavist
+  logo: /img/sponsors/adaptavist.png
+  url: https://www.adaptavist.com
+  contribution: Host

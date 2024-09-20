@@ -1,0 +1,73 @@
+---
+layout: default
+---
+{% include head.html %}
+<article class="event-gallery">
+  <h1 class="text-3xl font-bold mb-4 text-primary">{{ page.title }} Gallery</h1>
+  <p class="mb-4 text-secondary">{{ page.date | date: "%B %d, %Y" }} • {{ page.location }}</p>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+    {% for image in page.gallery_images %}
+      <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
+        <div class="relative pt-[75%]">
+          <img
+            src="{{ image | size: 400 }}"
+            data-full-img="{{ image | size: 800 }}"
+            srcset="{{ image | srcset }}"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            width="{{ image | width }}"
+            height="{{ image | height }}"
+            alt="{{ page.title }} - Gallery Image"
+            class="absolute inset-0 w-full h-full object-cover cursor-pointer"
+            onclick="openLightbox(this)"
+          >
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <a href="{{ page.event_url }}" class="text-accent hover:underline flex items-center">
+    Back to event details {% include icon.html name="arrow-right" class="w-4 h-4 ml-1" %}
+  </a>
+</article>
+
+<div id="lightbox" class="fixed inset-0 bg-black bg-opacity-75 hidden z-50 overflow-auto">
+  <div class="flex items-center justify-center min-h-screen p-4">
+    <div class="relative">
+      <img id="lightbox-img" src="" alt="Lightbox Image" class="max-w-full max-h-[80vh] object-contain">
+      <button onclick="closeLightbox()" class="absolute top-2 right-2 text-white text-2xl bg-black bg-opacity-50 rounded-full w-8 h-8 flex items-center justify-center">&times;</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function openLightbox(img) {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxContent = lightbox.querySelector('div > div');
+  
+  lightboxImg.src = img.getAttribute('data-full-img');
+  lightbox.classList.remove('hidden');
+  
+  // Calculate the vertical center of the viewport
+  const viewportCenter = window.innerHeight / 2;
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+  // Position the lightbox content
+  lightboxContent.style.marginTop = `${scrollTop + viewportCenter - (lightboxContent.offsetHeight / 2)}px`;
+  
+  document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  lightbox.classList.add('hidden');
+  document.body.style.overflow = ''; // Restore scrolling
+}
+
+document.getElementById('lightbox').addEventListener('click', function(e) {
+  if (e.target === this) {
+    closeLightbox();
+  }
+});
+</script>

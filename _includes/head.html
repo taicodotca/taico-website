@@ -1,0 +1,48 @@
+<!-- _includes/head.html -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link href="/assets/css/google-fonts.css" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<style>
+    body {
+        background-image: url('/img/background/background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+</style>
+
+<!-- Twitter cards -->
+<meta name="twitter:site" content="TAICO">
+<meta name="twitter:creator" content="TAICO">
+<meta name="twitter:title" content="{{ page.title }}">
+
+{% if page.excerpt %}
+<meta name="twitter:description" content="{{ page.excerpt }}">
+<!-- linked in -->
+<meta property="og:description" content="{{ page.excerpt }}" />
+<!-- end of linked in -->
+{% else %}
+<meta name="twitter:description" content="{{ site.description }}">
+{% endif %}
+
+{% if page.image %}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ page.image | absolute_url }}">
+<!-- linked in -->
+<meta property="og:image" content="{{ page.image | absolute_url }}" />
+{% endif %}
+<!-- end of Twitter cards -->
+
+
+<style>
+    /* Custom styles for code blocks */
+    pre[class*="language-"] {
+        border-radius: 0.375rem;
+        margin: 1.5em 0;
+    }
+    :not(pre) > code[class*="language-"] {
+        border-radius: 0.25rem;
+        padding: 0.2em 0.4em;
+    }
+</style>

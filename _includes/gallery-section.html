@@ -1,0 +1,8 @@
+<section id="gallery" class="mb-12">
+  <h2 class="text-2xl font-bold mb-4 text-primary">Event Image Gallery {% include icon.html name="arrow-right" class="inline w-4 h-4 ml-1" %}</h2>
+  <p class="mb-4 text-secondary">Explore images from our recent events <a href="/all-events.html" class="text-accent hover:underline flex items-center">View all events {% include icon.html name="arrow-right" class="w-4 h-4 ml-1" %}</a></p>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {% event_gallery %}
+  </div>
+</section>

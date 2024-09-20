@@ -1,0 +1,14 @@
+               <!-- Categories Section -->
+               <section id="categories" class="mb-12">
+                <h3 class="text-xl font-semibold mb-4 text-primary">Categories {% include icon.html name="arrow-right" class="inline w-4 h-4 ml-1" %}</h3>
+                <p class="text-secondary mb-4">Browse content by topic</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                    {% for category in site.categories limit:8 %}
+                    <div class="bg-white border border-gray-200 p-4 rounded-lg shadow-sm flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-accent rounded-full mb-2"></div>
+                        <h4 class="font-semibold text-primary">{{ category[0] }}</h4>
+                        <p class="text-sm text-secondary">{{ category[1].size }} posts</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>

@@ -1,0 +1,12 @@
+<section>
+    <h2 class="text-2xl font-bold mb-4 text-primary">Connect with Us {% include icon.html name="arrow-right" class="inline w-4 h-4 ml-1" %}</h2>
+    <p class="mb-4 text-secondary">Where you can register for meetups, make suggestions for talks and workshops, and connect with us.</p>
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+        {% for link in site.data.social_links %}
+        <a href="{{ link.url }}" class="block bg-white border border-gray-200 rounded-lg shadow-sm p-2 text-center">
+            <img src="{{ link.icon }}" alt="{{ link.name }}" class="w-12 h-12 mx-auto mb-2">
+            <p class="text-sm font-semibold text-primary">{{ link.name }}</p>
+        </a>
+        {% endfor %}
+    </div>
+</section>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    {% include head.html %}
+</head>
+<body class="font-sans text-primary min-h-screen">
+    <div class="max-w-6xl mx-auto px-4 py-8">
+        <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg shadow-md p-6">
+            {% include header.html %}
+
+            <main>
+                {{ content }}
+            </main>
+
+            {% include footer.html %}
+        </div>
+    </div>
+
+    {% include scripts.html %}
+</body>
+</html>

@@ -1,0 +1,39 @@
+---
+layout: default
+title: All Events
+hero: false
+---
+
+<section class="max-w-6xl mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold mb-8 text-primary">Upcoming Events</h1>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {% assign events = site.posts | where: "categories", "event" | sort: "date" %}
+    {% for event in events %}
+      <a href="{{ event.url }}" class="group block bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
+        <div class="relative w-full pt-[56.25%]">
+          <img src="{{ event.image | default: '/assets/images/default-event-image.jpg' }}" alt="{{ event.title }}" class="absolute inset-0 w-full h-full object-cover">
+        </div>
+        <div class="p-4">
+          <h2 class="text-xl font-semibold mb-2 text-primary group-hover:text-accent transition-colors duration-300">{{ event.title }}</h2>
+          <p class="text-sm text-secondary mb-2">
+            <span class="inline-block mr-3">
+              {% include icon.html name="calendar" class="inline-block w-4 h-4 mr-1" %}
+              {{ event.date | date: "%B %d, %Y" }}
+            </span>
+            {% if event.location %}
+              <span class="inline-block">
+                {% include icon.html name="map-pin" class="inline-block w-4 h-4 mr-1" %}
+                {{ event.location }}
+              </span>
+            {% endif %}
+          </p>
+          <p class="text-secondary mb-4">{{ event.excerpt | strip_html | truncatewords: 30 }}</p>
+          <span class="text-accent inline-flex items-center">
+            Learn more {% include icon.html name="arrow-right" class="inline w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" %}
+          </span>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,23 @@
+- name: Sahand Sojoodi
+  image: /img/speakers/sahand-sojoodi.jpg
+  social_links:
+   - platform: linkedin
+     url: https://www.linkedin.com/in/sahandsojoodi/
+
+- name: Mark Xiang
+  image: /img/speakers/mark-xiang.jpg
+  social_links:
+   - platform: linkedin
+     url: https://www.linkedin.com/in/markxy/
+
+- name: Andrei Betlen
+  image: /img/speakers/andrei-betlen.jpg
+  social_links:
+   - platform: linkedin
+     url: https://www.linkedin.com/in/andrei-betlen/
+
+- name: Kellman Meghu
+  image: /img/speakers/kellman-meghu.jpg
+  social_links:
+   - platform: linkedin
+     url: https://www.linkedin.com/in/kellman/

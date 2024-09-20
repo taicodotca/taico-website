@@ -1,0 +1,17 @@
+- name: Curtis Collicutt
+  role: Co-Organizer
+  image: /img/organizers/curtis.jpg
+  social_links:
+    - platform: linkedin
+      url: https://www.linkedin.com/in/ccollicutt/
+    - platform: github
+      url: https://github.com/ccollicutt
+    - platform: huggingface
+      url: https://huggingface.co/ccollicutt
+
+- name: Kosseila HD
+  role: Co-Organizer
+  image: /img/organizers/kousshd.jpg
+  social_links:
+    - platform: linkedin
+      url: https://www.linkedin.com/in/kousshd/

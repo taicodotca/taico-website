@@ -1,0 +1,41 @@
+---
+layout: default
+title: "All Articles"
+hero: false
+---
+
+<section class="max-w-6xl mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold mb-8 text-primary">All Articles</h1>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {% assign sorted_posts = site.posts | sort: "date" | reverse %}
+    {% for post in sorted_posts %}
+      {% unless post.categories contains "event" %}
+        <a href="{{ post.url }}" class="group block bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
+          <div class="relative w-full pt-[56.25%]">
+            <img src="{{ post.image | default: '/assets/images/default-article-image.jpg' }}" alt="{{ post.title }}" class="absolute inset-0 w-full h-full object-cover">
+          </div>
+          <div class="p-4">
+            <h2 class="text-xl font-semibold mb-2 text-primary group-hover:text-accent transition-colors duration-300">{{ post.title }}</h2>
+            <p class="text-sm text-secondary mb-2">
+              <span class="inline-block mr-3">
+                {% include icon.html name="calendar" class="inline-block w-4 h-4 mr-1" %}
+                {{ post.date | date: "%B %d, %Y" }}
+              </span>
+              {% if post.author %}
+                <span class="inline-block">
+                  {% include icon.html name="user" class="inline-block w-4 h-4 mr-1" %}
+                  {{ post.author }}
+                </span>
+              {% endif %}
+            </p>
+            <p class="text-secondary mb-4">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+            <span class="text-accent inline-flex items-center">
+              Read more {% include icon.html name="arrow-right" class="inline w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" %}
+            </span>
+          </div>
+        </a>
+      {% endunless %}
+    {% endfor %}
+  </div>
+</section>

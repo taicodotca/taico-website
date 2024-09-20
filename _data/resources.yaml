@@ -1,0 +1,9 @@
+- title: "Resource 1"
+  url: "https://wired.com"
+  image: "/img/resources/resource1.png"
+  description: "Brief description of Resource 1"
+
+- title: "Resource 2"
+  url: "https://example.com/resource2"
+  image: "/img/resources/resource1.png"
+  description: "Brief description of Resource 2"

@@ -1,0 +1,13 @@
+- name: "CNCF Canada"
+  url: "https://linktr.ee/cloud.native.canada"
+  logo: "/img/other-meetups/cncf-canada.jpg"
+  description: "Ottawa, Toronto, & Montreal"
+
+- name: "AI Tinkerers Toronto"
+  url: "https://toronto.aitinkerers.org/"
+  logo: "/img/other-meetups/ai-tinkerers-toronto.jpg"
+
+- name: "Local and Open Source AI Developer Meetup"
+  url: "https://lu.ma/ollama"
+  logo: "/img/other-meetups/ollama.jpg"
+  description: "Global meetup"

@@ -1,0 +1,11 @@
+- name: Meetup
+  url: https://www.meetup.com/taico-toronto-artificial-intelligence-and-cybersecurity-org/
+  icon: /img/social/meetup-com.png
+
+- name: Call for Papers
+  url: https://www.papercall.io/taico-meetup
+  icon: /img/social/papercall.png
+
+- name: LinkedIn
+  url: https://www.linkedin.com/company/taicoca
+  icon: /img/social/linkedin.png
