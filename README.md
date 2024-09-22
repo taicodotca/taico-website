@@ -6,12 +6,12 @@ This is a Jekyll and Node.js based website for the TACIO project at https://taic
 
 This is how to run the website locally on Linux. The process would be similar for other operating systems.
 
-## Prerequisites
+### Prerequisites
 
 - Ubuntu-based system
 - Git
 
-## Installation Steps
+### Installation Steps
 
 At the end, we should have something like this:
 
@@ -87,7 +87,7 @@ $ npm --version
     npm install
     ```
 
-## Running the Website Locally
+### Running the Website Locally
 
 To run the Jekyll website locally:
 
