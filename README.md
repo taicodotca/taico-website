@@ -101,8 +101,8 @@ You can now access the website at `http://<your-ip-address>:4000`.
 
 This project uses multiple licenses:
 
-- Images: Copyright © [Year] [Owner Name]. All rights reserved.
-- Posts/Content: Copyright © [Year] by their respective authors. All rights reserved.
+- Images: Copyright © 2024 by their respective authors. All rights reserved.
+- Posts/Content: Copyright © 2024 by their respective authors. All rights reserved.
 - Website Template: GNU General Public License v3.0 (GPL-3.0)
 
 Please see the `LICENSE` file for full details.
