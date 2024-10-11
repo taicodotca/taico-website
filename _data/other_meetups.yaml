@@ -11,3 +11,8 @@
   url: "https://lu.ma/ollama"
   logo: "/img/other-meetups/ollama.jpg"
   description: "Global meetup"
+
+- name: "AI Friends"
+  url: "https://lu.ma/user/damidina"
+  logo: "/img/other-meetups/ai-friends.png"
+  description: "Toronto meetup for AI builders"
