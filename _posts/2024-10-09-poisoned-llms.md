@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: wide_post
 title:  "Poisoned LLMs"
 categories: article
 image: "/img/posts/poisoned-llms.png"

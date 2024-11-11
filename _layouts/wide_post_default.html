@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    {% include head.html %}
+    <style>
+        body {
+            background-image: url('/img/background/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                background: white;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-primary min-h-screen">
+    <div class="max-w-6xl mx-auto md:px-4 md:py-8">
+        <div class="bg-white md:bg-opacity-90 md:backdrop-blur-sm rounded-2xl md:shadow-md md:p-6 sm:p-0">
+            {% include header.html %}
+
+            <!-- Main Content - Simplified for mobile -->
+            <main class="bg-white px-4 md:px-0 rounded-2xl overflow-x-hidden">
+                {{ content }}
+            </main>
+
+            {% include footer.html %}
+
+        </div>
+    </div>
+
+    {% include scripts.html %}
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            Prism.highlightAll();
+        });
+    </script>
+
+</body>
+</html>

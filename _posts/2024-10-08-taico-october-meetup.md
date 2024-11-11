@@ -7,7 +7,7 @@ categories: event
 image: "/img/posts/taico-meetup-october-2024.png"
 excerpt: The third TAICO meetup!
 location: Adaptavist
-#gallery: /img/gallery/09-17-2024
+gallery: /img/gallery/10-29-2024
 author: TAICO
 author_image: /img/authors/taico-robot.png
 ---
@@ -28,12 +28,30 @@ With that in mind, we're pleased to announce our speaker and the agenda for our 
 
 ## Agenda
 
-1. Welcome and introductions
-1. Demo of GenAI and security in action
-1. Speaker #1 - Details to come
-1. Speaker #2 - Details to come
-1. Lightning talks and demos - Please let us know if you have anything to show
-1. Networking and drinks
+*  **Welcome and introductions**
+*  **Demo of GenAI and security in action**
+
+**Speaker #1: Jai Mansukhani**
+
+Talk Title: *Building AI Agents with Natural Language*
+
+About Jai:
+
+*"I’m Jai Mansukhani, co-founder of OpenSesame. My background in AI started with building a previous edtech company and the largest an association at uoft. Found that building reliable agents is super hard for people who just want to deploy an agent quickly. This experience inspired me to create OpenSesame, where we focus on building AI agents with natural language. Our goal is to build the Shopify of Vertical AI agents"*
+
+**Speaker #2: Akash Shetty**
+
+Talk Title: *Revolutionizing Document Analysis and Research with Multi-Agent Systems*
+
+Abstract:
+
+*"In a world drowning in data, extracting actionable insights from vast collections of documents is a game-changer. In this talk, you’ll discover how Publicus leverages multi-agent systems to transform document analysis and research. We’ll dive into the architecture of AI-powered agents that collaborate to automate data processing, streamline complex research tasks, and provide real-time updates on critical changes. Learn how advanced AI techniques, like Retrieval-Augmented Generation (RAG) and multi-agent coordination, can dramatically enhance efficiency, accuracy, and decision-making.*
+
+*"Whether you’re dealing with regulations, legal data, or extensive research materials, this session will equip you with the knowledge to build and implement multi-agent systems that intelligently navigate and analyze large datasets. Don’t miss out on this opportunity to unlock new capabilities and revolutionize your approach to document research!"*
+
+
+*  **Lightning talks and demos** - Please let us know if you have anything to show
+*  **Networking and drinks**
 
 ## Lightning Talks and Demos
 

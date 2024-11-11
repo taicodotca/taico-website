@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: wide_post
 title:  "Securely Executing LLM Generated Code, for Agentic Systems and Otherwise"
 categories: article
 image: "/img/posts/isolated-code.png"
