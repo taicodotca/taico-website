@@ -121,19 +121,21 @@ layout: wide_post_default
 <!-- TOC Generation Script -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Get all headings from the content
-    const article = document.getElementById('post-content');
-    const headings = article.querySelectorAll('h2, h3');
     const toc = document.getElementById('toc');
+    if (!toc) return; // Exit if TOC element doesn't exist
+    
+    const article = document.getElementById('post-content');
+    if (!article) return; // Exit if article element doesn't exist
+    
+    const headings = article.querySelectorAll('h2, h3');
+    if (!headings.length) return; // Exit if no headings found
     
     // Create TOC items
     headings.forEach((heading, index) => {
-      // Generate unique ID for the heading if it doesn't have one
       if (!heading.id) {
         heading.id = `heading-${index}`;
       }
       
-      // Create TOC link
       const link = document.createElement('a');
       link.href = `#${heading.id}`;
       link.textContent = heading.textContent;
@@ -141,7 +143,6 @@ layout: wide_post_default
         heading.tagName === 'H3' ? 'ml-4' : ''
       }`;
       
-      // Add click handler for smooth scrolling
       link.addEventListener('click', (e) => {
         e.preventDefault();
         document.querySelector(link.getAttribute('href')).scrollIntoView({
@@ -153,27 +154,27 @@ layout: wide_post_default
     });
     
     // Highlight active section while scrolling
-    let tocLinks = toc.getElementsByTagName('a');
-    let headingElements = Array.from(headings);
+    const tocLinks = Array.from(toc.getElementsByTagName('a')); // Convert to array
+    const headingElements = Array.from(headings);
     
-    window.addEventListener('scroll', () => {
-      const scrollPosition = window.scrollY;
-      
-      // Find the current section
-      let currentSection = headingElements[0];
-      headingElements.forEach(heading => {
-        if (heading.offsetTop <= scrollPosition + 200) {
-          currentSection = heading;
-        }
+    if (tocLinks.length > 0) { // Only add scroll listener if we have TOC links
+      window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+        
+        let currentSection = headingElements[0];
+        headingElements.forEach(heading => {
+          if (heading.offsetTop <= scrollPosition + 200) {
+            currentSection = heading;
+          }
+        });
+        
+        tocLinks.forEach(link => {
+          link.classList.remove('text-blue-800', 'font-bold');
+          if (link.getAttribute('href') === `#${currentSection.id}`) {
+            link.classList.add('text-blue-800', 'font-bold');
+          }
+        });
       });
-
-      // Update active state
-      tocLinks.forEach(link => {
-        link.classList.remove('font-medium', 'text-blue-800');
-        if (currentSection && link.getAttribute('href') === `#${currentSection.id}`) {
-          link.classList.add('font-medium', 'text-blue-800');
-        }
-      });
-    });
+    }
   });
 </script>
