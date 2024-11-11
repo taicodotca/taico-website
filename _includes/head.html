@@ -40,9 +40,24 @@
     pre[class*="language-"] {
         border-radius: 0.375rem;
         margin: 1.5em 0;
+        overflow-x: auto;
+        max-width: 100%;
     }
     :not(pre) > code[class*="language-"] {
         border-radius: 0.25rem;
         padding: 0.2em 0.4em;
+        white-space: normal;
+    }
+
+    /* Add these styles for code blocks */
+    pre {
+        overflow-x: auto;
+        max-width: 100%;
+        padding: 1rem;
+    }
+    
+    code {
+        white-space: pre-wrap;
+        word-wrap: break-word;
     }
 </style>
