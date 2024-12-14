@@ -3,7 +3,7 @@ layout: wide_post
 title: "How to Run WhiteRabbitNeo Models Locally"
 categories: article
 image: "/img/posts/how-to-run-wrn-locally.png"
-excerpt: "Can you have a good cyberscurity defense without a good cyberscurity offense?"
+excerpt: "Can you have a good cybersecurity defense without a good cybersecurity offense?"
 author: Curtis Collicutt
 author_image: "/img/organizers/curtis.jpg"
 author_linkedin: "https://www.linkedin.com/in/ccollicutt/"
@@ -12,7 +12,13 @@ published: true
 
 > The #1 uncensored, open source AI model for red & blue team cybersecurity. AI pair programming with WhiteRabbitNeo provides (Dev)SecOps teams expertise on IaC development, pen testing, malware crafting, & more. - [WhiteRabbitNeo](https://whiterabbitneo.com)
 
+<div class="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4" role="alert">
+  <p>⚠️  This article discusses uncensored "free range" AI models for defensive cybersecurity purposes only. The goal is to help defenders understand and protect against threats, not enable other kinds of nefarious, unethical, or just plain awful activities.</p>
+</div>
+
 <hr >
+
+## Introduction
 
 In a previous post I wrote about [WhiteRabbitNeo](https://taico.ca/posts/whiterabbitneo/). To sum it up, WhiteRabbitNeo is a set of large language models that have removed the guardrails around cybersecurity--attack code, malware, CVEs, etc.--at least to some extent. This allows the potential for the model to generate offensive code, malware, and other content that could be used by ethical hackers, red teams, and blue teams to protect their own infrastructure. 
 
@@ -38,7 +44,7 @@ In short, it allows us to run most LLMs on Hugging Face locally on the CPU. But 
 
 What's [Ollama](https://ollama.com)?
 
-I like to think of Ollama as the Docker of LLMs. It's a lightweight, easy to use and flexible way to run LLMs. It works a lot like Docker, except it's for LLMs, which are of course very different from containers, but the user experience is very similar, at least in my opinion.
+I like to think of Ollama as the Docker of LLMs. It's an easy to use and flexible way to run LLMs, especially in that you don't have to write a Python script to run the LLM. It feels a lot like Docker, except it's for LLMs, which are of course different from containers, but the user experience is similar, at least in my opinion.
 
 Recently, Ollama added support for running any model that has a GGUF file. This is the key to being able to run most of the LLMs on Hugging Face.
 
@@ -76,7 +82,7 @@ In the picture below, I'm showing some of the versions for the WhiteRabbitNeo-2.
 
 ![WhiteRabbitNeo Models](/img/posts/wrn-bart1.png)
 
->📝 This model is very large, not only in file size, but also in memory usage. I'm running on a machine with a GPU that has 24GB of memory, and this model takes up about 15GB of memory.
+>📝 This model is large, not only in file size, but also in memory usage. I'm running on a machine with a GPU that has 24GB of memory, and this model takes up about 15GB of memory.
 
 ```bash
 ollama run hf.co/bartowski/WhiteRabbitNeo-2.5-Qwen-2.5-Coder-7B-GGUF:F16
@@ -118,7 +124,7 @@ And we can start talking to the LLM. Is it a good conversation? Is it a good ans
 
 ![Open WebUI](/img/posts/wrn-reverse-shell.jpg)
 
-## Next Up: Analayzing Your Environment and Asking for Red Team Code
+## Next Up: Analyzing Your Environment and Asking for Red Team Code
 
 At this point, we've looked through the various WhiteRabbitNeo models and variations that Bartowski has created, and we've chosen one. We've run it in Ollama, and we've accessed it through Open WebUI. Theoretically, we can now ask it for red team code and for help in analyzing your environment--your infrastructure, servers, applications, and so on.
 
@@ -132,11 +138,3 @@ But that's a topic for the next post!
 * [Security Week - WhiteRabbitNeo: High-Powered Potential of Uncensored AI Pentesting for Attackers and Defenders](https://www.securityweek.com/whiterabbitneo-high-powered-potential-of-uncensored-ai-pentesting-for-attackers-and-defenders/)
 * [Security Week - OpenAI says Iranian hackers used ChatGPT to plan ICS attacks](https://www.securityweek.com/openai-says-iranian-hackers-used-chatgpt-to-plan-ics-attacks/)
 * [Global Newswire - Open Source GenAI Model WhiteRabbitNeo Advances Support for Offensive Cybersecurity and DevSecOps Teams with New Release](https://www.globenewswire.com/news-release/2024/10/23/2967886/0/en/Open-Source-GenAI-Model-WhiteRabbitNeo-Advances-Support-for-Offensive-Cybersecurity-and-DevSecOps-Teams-with-New-Release.html)
-
-
-
-
-
-
-
-

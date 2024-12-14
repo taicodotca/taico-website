@@ -21,3 +21,29 @@
   social_links:
    - platform: linkedin
      url: https://www.linkedin.com/in/kellman/
+
+- name: Jai Mansukhani
+  image: /img/speakers/jai.jpg
+  social_links:
+   - platform: linkedin
+     url: https://www.linkedin.com/in/jai-mansukhani-b748b1142/
+
+- name: Akash Shetty
+  image: /img/speakers/akash.jpg
+  social_links:
+   - platform: linkedin
+     url: https://www.linkedin.com/in/akash-shetty/
+
+- name: Dami Dina
+  image: /img/speakers/dami.jpg
+  social_links:
+   - platform: linkedin
+     url: https://www.linkedin.com/in/damidina/
+
+- name: Joshua Carpeggiani
+  image: /img/speakers/josh.jpg
+  social_links:
+   - platform: linkedin
+     url: https://www.linkedin.com/in/joshcarp/
+
+  

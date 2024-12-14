@@ -12,6 +12,10 @@ published: true
 
 >The #1 uncensored, open source AI model for red & blue team cybersecurity. AI pair programming with WhiteRabbitNeo provides (Dev)SecOps teams expertise on IaC development, pen testing, malware crafting, & more. - [WhiteRabbitNeo](https://whiterabbitneo.com)
 
+<div class="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4" role="alert">
+  <p>⚠️  This article discusses uncensored "free range" AI models for defensive cybersecurity purposes only. The goal is to help defenders understand and protect against threats, not enable other kinds of nefarious, unethical, or just plain awful activities.</p>
+</div>
+
 ## LLM Censors and Guardrails
 
 Most large language models (LLMs) are censored, meaning that they have all kinds of guardrails and security features applied to them. In fact many of them are even further hampered--they are "nerfed" to reduce their capabilities even more. This is because many of the issues with LLMs are related to the fact that we can get them to say or do things they shouldn't say or do. Without guardrails, this is a problem. So we have guardrails.

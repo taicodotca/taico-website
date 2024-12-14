@@ -7,14 +7,14 @@ categories: event
 image: "/img/posts/taico-meetup-nov-2024.png"
 excerpt: The fourth TAICO meetup!
 location: Adaptavist
-#gallery: /img/gallery/10-29-2024
+gallery: /img/gallery/11-27-2024
 author: TAICO
 author_image: /img/authors/taico-robot.png
 ---
 
 The TAICO team is proud to announce our next meetup on Wednesday, November 27th at the Adaptavist office in Toronto. Much thanks to [Adaptavist](https://www.adaptavist.com/) for hosting!
 
-**tldr - event registration link** - [meetup.com](https://www.meetup.com/taico-toronto-artificial-intelligence-and-cybersecurity-org/events/304485317/)
+🔗 **tldr - event registration link** - [meetup.com](https://www.meetup.com/taico-toronto-artificial-intelligence-and-cybersecurity-org/events/304485317/)
 
 ## Registration and Event Details
 
@@ -28,10 +28,22 @@ With that in mind, we're pleased to announce our speaker and the agenda for our 
 
 ## Agenda
 
-*  **Welcome and introductions**
-*  **Demo of GenAI and security in action**
+*  👋 **Welcome and introductions**
+*  🚀 **Demo of GenAI and security in action**
 
-**Speaker #1: David Sampson CISSP**
+🎤 **Speaker #1: Dami Dina**
+
+Talk Title: *AI is the Future - How AI Impacts All Aspects of Software Development*
+
+About Dami:
+
+*"Dami is a founder of Emanation AI which is focused on enabling the next billion creators to create high quality software with AI."*
+
+<div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4" role="alert">
+  <p>Please note that due to unforeseen circumstances, David Sampson will not be presenting at this meetup but will be rescheduled for a future meetup.</p>
+</div>
+
+🎤 **Speaker #2: David Sampson CISSP**
 
 Talk Title: *Application Security and Artificial Intelligence*
 
@@ -45,15 +57,32 @@ Abstract:
 
 *"In this session, I will explore how security teams can leverage the enthusiasm for generative AI to teach developers how to integrate robust security measures into their code seamlessly. Focusing on the DevSecOps cycle, I’ll demonstrate how generative AI can assist in key security activities such as finding vulnerabilities, explaining security flaws, and providing actionable fixes. Using real-world technical examples, I will walk through how AI-driven tools can enhance the efficiency and accuracy of security practices in development environments, making security an accessible and integral part of the development lifecycle."*
 
-**Speaker #2: Coming soon!**
+🎤 **Speaker #3: Joshua Carpeggiani**
 
-*  **Lightning talks and demos** - Please let us know if you have anything to show
-*  **Networking and drinks**
+Talk Title: *LLM Hallucinations; What are they and how can they be mitigated?*
 
-## Lightning Talks and Demos
+Abstract:
+
+*"This talk presents a comprehensive overview of hallucinations in Large Language Models (LLMs), one of the most critical challenges facing modern AI systems. We begin by introducing a refined taxonomy of hallucinations, categorizing them into factuality hallucinations (inconsistencies with real-world facts) and faithfulness hallucinations (deviations from given contexts or instructions).*
+
+*We then explore the multifaceted causes of hallucinations, from data-related issues like flawed training sources and knowledge boundaries, to training-related challenges in both pre-training and alignment stages, to inference-time complications arising from decoding strategies.*
+
+*The presentation will cover state-of-the-art detection methods and evaluation benchmarks, examining how researchers are working to identify and measure hallucinations in LLM outputs. We’ll discuss various mitigation strategies, including retrieval augmentation, knowledge editing, and enhanced decoding techniques. Finally, we’ll address emerging challenges in specific domains like long-form text generation and multimodal systems, and explore open questions about LLMs’ self-correction capabilities and the balance between creativity and factuality. This talk aims to provide researchers and practitioners with a comprehensive understanding of this crucial challenge in AI development.*"
+
+Talk References:
+
+* [https://arxiv.org/pdf/2311.05232](https://arxiv.org/pdf/2311.05232)
+* [https://arxiv.org/abs/2406.02543](https://arxiv.org/abs/2406.02543)
+* [https://arxiv.org/pdf/2307.10236](https://arxiv.org/pdf/2307.10236)
+* [https://arxiv.org/pdf/1904.09751](https://arxiv.org/pdf/1904.09751)
+
+*  ⚡ **Lightning talks and demos** - Please let us know if you have anything to show
+*  🍻 **Networking and drinks**
+
+## ⚡ Lightning Talks and Demos
 
 Please reach out to us if you'd like to present at the meetup. We are looking for people to talk about what they are working on, what they are building and learning, and are open to any level of experience and technical depth. Whether you are a beginner or an expert, we want to hear from you! We're all just out here building and learning.
 
-## See You There!
+## 👋 See You There!
 
-Thanks, and we look forward to seeing you there!
+Thanks, and we look forward to seeing you at the meetup!
